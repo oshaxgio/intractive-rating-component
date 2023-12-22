@@ -10,7 +10,9 @@ const submittedRating = document.querySelector(
 // Set up the click event listener for the ratings
 container.addEventListener("click", function (event) {
 	const clickedRating = event.target;
-	if (clickedRating.classList.contains("active")) {
+	if (
+		clickedRating.classList.contains("rate" && "active")
+	) {
 		clickedRating.classList.remove("active");
 	} else if (clickedRating.classList.contains("rate")) {
 		document
@@ -20,7 +22,6 @@ container.addEventListener("click", function (event) {
 			});
 		clickedRating.classList.add("active");
 		selectedRating = clickedRating.textContent;
-		console.log(Number(selectedRating));
 	}
 });
 
