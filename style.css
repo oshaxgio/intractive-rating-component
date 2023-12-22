@@ -1,0 +1,136 @@
+@import url(https://fonts.google.com/specimen/Overpass);
+:root {
+	--White: hsl(0, 0%, 100%);
+	--Light-Grey: hsl(217, 12%, 63%);
+	--Medium-Grey: hsl(213, 19%, 18%);
+	--Dark-Blue: hsl(218, 22%, 15%);
+	--Very-Dark-Blue: hsl(216, 12%, 8%);
+	--Orange: hsl(25, 98%, 53%);
+}
+
+* {
+	font-size: 15px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "overpass", sans-serif;
+}
+.main {
+	display: flex;
+	width: 100%;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--Very-Dark-Blue);
+}
+
+.container {
+	max-width: 400px;
+}
+
+.first,
+.second {
+	background-color: var(--Dark-Blue);
+	padding: 30px;
+	display: flex;
+	width: auto;
+	flex-direction: column;
+	justify-content: flex-start;
+	border-radius: 15px;
+}
+
+.second {
+	display: none;
+	align-items: center;
+}
+
+.header {
+	color: var(--White);
+	font-size: 1.8rem;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+.content {
+	color: var(--Light-Grey);
+	margin-bottom: 30px;
+}
+
+.raiting {
+	display: flex;
+	justify-content: space-between;
+}
+
+.icon-star {
+	background-color: var(--Medium-Grey);
+	color: var(--Light-Grey);
+	border-radius: 50px;
+	font-size: 18px;
+	padding: 15px 15px;
+	margin-bottom: 30px;
+	display: block;
+	width: 100%;
+	max-width: 55px;
+	max-height: 65px;
+}
+
+.rating-number {
+	background-color: var(--Medium-Grey);
+	color: var(--Light-Grey);
+	border-radius: 50px;
+	padding: 15px 20px;
+}
+.rating-number:hover {
+	background-color: var(--Light-Grey);
+	color: var(--White);
+	cursor: pointer;
+}
+
+.active {
+	background-color: var(--Orange);
+	color: var(--White);
+}
+
+.button {
+	background-color: var(--Orange);
+	text-align: center;
+	color: var(--White);
+	font-size: 15px;
+	padding: 15px 25px;
+	border-radius: 50px;
+	margin-top: 30px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.button:hover,
+.button:active {
+	background-color: var(--White);
+	color: var(--Orange);
+	cursor: pointer;
+}
+.icon-submited {
+	display: block;
+}
+
+.rating-submitted {
+	color: var(--Orange);
+	background-color: var(--Medium-Grey);
+	border-radius: 20px;
+	text-align: center;
+	padding: 10px 20px;
+	margin: 30px 0;
+}
+
+.content-submited {
+	color: var(--Light-Grey);
+	text-align: center;
+}
+@media (max-width: 600px) {
+	.first,
+	.second {
+		margin: 0 20px;
+	}
+	.rating-number {
+		padding: 10px 15px;
+	}
+}
